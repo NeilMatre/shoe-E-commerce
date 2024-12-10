@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-shoe-prints"></i> ShoeSpot
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Order Section -->
+        <section class="cart-order">
+            <h2>Your Order</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <div class="order-summary">
+                <p>Subtotal: <span id="subtotal">₱0.00</span></p>
+                <p>Shipping: <span id="shipping">-</span></p>
+                <p class="order-total">Order Total: <span id="order-total">₱0.00</span></p>
+            </div>
+            <button onclick="clearCart()" class="clear-cart-btn">Clear Cart</button>
+        </section>
+
+        <!-- Customer Information Section -->
+        <section class="customer-info">
+            <h2>Customer Information</h2>
+            <form>
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Phone Number</label>
+                <input type="text" placeholder="Enter your phone number" required>
+
+                <h3>Shipping Address</h3>
+                <label>First Name</label>
+                <input type="text" placeholder="Enter your first name" required>
+
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter your last name" required>
+
+                <label>Country</label>
+                <select>
+                    <option value="philippines">Philippines</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label>Street Address</label>
+                <input type="text" placeholder="Enter your street address" required>
+
+                <label>City</label>
+                <input type="text" placeholder="Enter your city" required>
+
+                <label>Postal/Zip</label>
+                <input type="text" placeholder="Enter postal/zip code" required>
+
+                <button type="submit" class="continue-btn">Continue</button>
+            </form>
+        </section>
+
+        <!-- Shipping Options Section -->
+        <section class="shipping-options">
+            <h2>Shipping Options</h2>
+            <p>Shipping options will be calculated here once we have your address.</p>
+        </section>
+
+        <!-- Payment Section -->
+        <section class="payment">
+            <h2>Payment</h2>
+            <p>All transactions are secure, and your credit card information is never stored.</p>
+            <button class="paypal-btn">PayPal Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Shopping Cart. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

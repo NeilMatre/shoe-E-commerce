@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoeSpot</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>ShoeSpot</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <!-- Sidebar for Categories -->
+        <nav class="sidebar">
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <i class="fas fa-bars"></i> Categories
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#men">Men's Shoes</a></li>
+                        <li><a href="#women">Women's Shoes</a></li>
+                        <li><a href="#sport">Sport Shoes</a></li>
+                        <li><a href="#casual">Casual Shoes</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Category Sections -->
+            <section id="men">
+                <h2>Men's Shoes</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/shoe1.jpeg" alt="Classic Sneakers">
+                        <h3>Classic Sneakers</h3>
+                        <p>Price: ₱1,000.00</p>
+                        <label for="size-men-1">Size:</label>
+                        <select id="size-men-1">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-men-1">Quantity:</label>
+                        <input type="number" id="quantity-men-1" min="1" value="1">
+                        <button onclick="addToCart('Classic Sneakers', 1000, 'size-men-1', 'quantity-men-1', 'images/shoe1.jpeg')">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/shoe2.jpeg" alt="Running Shoes">
+                        <h3>Nike Revolution 1 Shoes</h3>
+                        <p>Price: ₱3,500.00</p>
+                        <label for="size-men-2">Size:</label>
+                        <select id="size-men-2">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-men-2">Quantity:</label>
+                        <input type="number" id="quantity-men-2" min="1" value="1">
+                        <button onclick="addToCart('Running Shoes', 3500, 'size-men-2', 'quantity-men-2', 'images/shoe2.jpeg')">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/samba 1.jpg" alt="Leather Loafers">
+                        <h3>Samba</h3>
+                        <p>Price: ₱2,000.00</p>
+                        <label for="size-men-3">Size:</label>
+                        <select id="size-men-3">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-men-3">Quantity:</label>
+                        <input type="number" id="quantity-men-3" min="1" value="1">
+                        <button onclick="addToCart('Leather Loafers', 2000, 'size-men-3', 'quantity-men-3', 'images/samba 1.jpg')">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/puma men 5.webp" alt="Sports Sneakers">
+                        <h3>Puma</h3>
+                        <p>Price: ₱1,800.00</p>
+                        <label for="size-men-4">Size:</label>
+                        <select id="size-men-4">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-men-4">Quantity:</label>
+                        <input type="number" id="quantity-men-4" min="1" value="1">
+                        <button onclick="addToCart('Sports Sneakers', 1800, 'size-men-4', 'quantity-men-4', 'images/puma men 5.webp')">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+            
+        
+            <section id="women">
+                <h2>Women's Shoes</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/converse women 5.jpeg" alt="Converse 5">
+                        <h3>Converse 5</h3>
+                        <p>Price: ₱3,990.00</p>
+                        <label for="size-women-1">Size:</label>
+                        <select id="size-women-1">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-women-1">Quantity:</label>
+                        <input type="number" id="quantity-women-1" min="1" value="1">
+                        <button onclick="addToCart('Converse 5', 800, 'size-women-1', 'quantity-women-1', 'images/converse women 5.jpeg')">Add to Cart</button>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product">
+                            <img src="images/casual women adidas 1.jpg" alt="Casual Women Addidas">
+                            <h3>Casual Women Shoes</h3>
+                            <p>Price: ₱800.00</p>
+                            <label for="size-women-1">Size:</label>
+                            <select id="size-women-1">
+                                <option value="36">36</option>
+                                <option value="37">37</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+                            </select>
+                            <label for="quantity-women-1">Quantity:</label>
+                            <input type="number" id="quantity-women-1" min="1" value="1">
+                            <button onclick="addToCart('Casual Women Addidas', 800, 'size-women-1', 'quantity-women-1', 'images/casual women adidas 1.jpg')">Add to Cart</button>
+                        </div>
+                    <div class="product">
+                        <img src="images/converse women 4.jpeg" alt="Stylish Heels">
+                        <h3>Stylish Heels</h3>
+                        <p>Price: ₱2,200.00</p>
+                        <label for="size-women-2">Size:</label>
+                        <select id="size-women-2">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-women-2">Quantity:</label>
+                        <input type="number" id="quantity-women-2" min="1" value="1">
+                        <button onclick="addToCart('Converse', 2200, 'size-women-2', 'quantity-women-2', 'images/converse women 4.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/loafers ritish women 2.jpeg" alt="Loafers Ritish">
+                        <h3>Loafers Ritish</h3>
+                        <p>Price: ₱800.00</p>
+                        <label for="size-women-1">Size:</label>
+                        <select id="size-women-1">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-women-1">Quantity:</label>
+                        <input type="number" id="quantity-women-1" min="1" value="1">
+                        <button onclick="addToCart('Converse 5', 800, 'size-women-1', 'quantity-women-1', 'images/loafers ritish women 2.jpeg')">Add to Cart</button>
+                    </div>
+            </section>
+        
+            <section id="sport">
+                <h2>Sport Shoes</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/GEL-1130.webp" alt="GEL-1130 Running Men Shoes">
+                        <h3> GEL-1130 Running Men Shoes</h3>
+                        <p>Price: ₱2,500.00</p>
+                        <label for="size-sport-1">Size:</label>
+                        <select id="size-sport-1">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-sport-1">Quantity:</label>
+                        <input type="number" id="quantity-sport-1" min="1" value="1">
+                        <button onclick="addToCart('Running Shoes', 2500, 'size-sport-1', 'quantity-sport-1', 'images/sport1.jpeg')">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/anta.webp" alt="ANTA Men Kyrie Irving KAI 1 'Triple Black' Basketball Shoes">
+                        <h3>ANTA Men Kyrie Irving KAI 1 'Triple Black' Basketball Shoes</h3>
+                        <p>Price: ₱3,200.00</p>
+                        <label for="size-sport-2">Size:</label>
+                        <select id="size-sport-2">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-sport-2">Quantity:</label>
+                        <input type="number" id="quantity-sport-2" min="1" value="1">
+                        <button onclick="addToCart('Basketball Shoes', 3200, 'size-sport-2', 'quantity-sport-2', 'images/sport2.jpeg')">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/W+NIKE+ZOOM+BELLA+6.png" alt="Nike Zoom Bella 6">
+                        <h3>Nike Zoom Bella 6 Women shoes</h3>
+                        <p>Price: ₱3,800.00</p>
+                        <label for="size-sport-3">Size:</label>
+                        <select id="size-sport-3">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-sport-3">Quantity:</label>
+                        <input type="number" id="quantity-sport-3" min="1" value="1">
+                        <button onclick="addToCart('Football Cleats', 3800, 'size-sport-3', 'quantity-sport-3', 'images/sport3.jpeg')">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/shees.jpg" alt="Nike Air Max Dn Premium Women shoes">
+                        <h3>Nike Air Max Dn Premium Women shoes</h3>
+                        <p>Price: ₱2,900.00</p>
+                        <label for="size-sport-4">Size:</label>
+                        <select id="size-sport-4">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-sport-4">Quantity:</label>
+                        <input type="number" id="quantity-sport-4" min="1" value="1">
+                        <button onclick="addToCart('Tennis Shoes', 2900, 'size-sport-4', 'quantity-sport-4', 'images/sport4.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+            
+            
+        
+            <section id="casual">
+                <h2>Casual Shoes</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/casual1.jpeg" alt="Casual Loafers">
+                        <h3>Casual men Loafers</h3>
+                        <p>Price: ₱1,500.00</p>
+                        <label for="size-casual-1">Size:</label>
+                        <select id="size-casual-1">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-casual-1">Quantity:</label>
+                        <input type="number" id="quantity-casual-1" min="1" value="1">
+                        <button onclick="addToCart('Casual Loafers', 1500, 'size-casual-1', 'quantity-casual-1', 'images/casual1.jpeg')">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/casual2.jpeg" alt="Slip-On Sneakers">
+                        <h3> Men Slip-On Sneakers</h3>
+                        <p>Price: ₱2,000.00</p>
+                        <label for="size-casual-2">Size:</label>
+                        <select id="size-casual-2">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-casual-2">Quantity:</label>
+                        <input type="number" id="quantity-casual-2" min="1" value="1">
+                        <button onclick="addToCart('Slip-On Sneakers', 2000, 'size-casual-2', 'quantity-casual-2', 'images/casual2.jpeg')">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/Vans casual low suade women.jpg" alt="Vans casual low suade women shoes">
+                        <h3>Vans casual low suade women shoes</h3>
+                        <p>Price: ₱1,800.00</p>
+                        <label for="size-casual-3">Size:</label>
+                        <select id="size-casual-3">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-casual-3">Quantity:</label>
+                        <input type="number" id="quantity-casual-3" min="1" value="1">
+                        <button onclick="addToCart('Canvas Shoes', 1800, 'size-casual-3', 'quantity-casual-3', 'images/casual3.jpeg')">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="images/Genuine Leather Loafers casual women.jpg" alt="Genuine Leather Loafers casual women">
+                        <h3>Genuine Leather Loafers casual women</h3>
+                        <p>Price: ₱2,200.00</p>
+                        <label for="size-casual-4">Size:</label>
+                        <select id="size-casual-4">
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                        </select>
+                        <label for="quantity-casual-4">Quantity:</label>
+                        <input type="number" id="quantity-casual-4" min="1" value="1">
+                        <button onclick="addToCart('Boat Shoes', 2200, 'size-casual-4', 'quantity-casual-4', 'images/casual4.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+            
+            
+        </main>        
+
+        <footer>
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Email: contact@shoSpot.com</p>
+                <p>Address: Rama Street, Calbayog City, Samar</p>
+                <p>Phone: +639265694103</p>
+            </section>
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=61569666338895&mibextid=ZbWKwL" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/shoe_sp0t?igsh=MWZuejllNGttdnQxaQ==oe_sp0t?igsh=MW1yMTU5amR6bzR4dA== " target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 ShoeSpot. All rights reserved.</p>
+        </footer>
+        
+
+    <script src="script.js"></script>
+</body>
+</html>

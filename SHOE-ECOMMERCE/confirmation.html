@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        main h2 {
+            color: #007BFF;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .order-summary {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+            text-align: left;
+        }
+
+        .order-summary h3 {
+            margin: 0 0 10px;
+            font-size: 1.3em;
+            color: #333;
+        }
+
+        .order-summary ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .order-summary ul li {
+            padding: 5px 0;
+            font-size: 1em;
+        }
+
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .home-btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Order Confirmation</h1>
+    </header>
+    <main>
+        <h2>Thank You for Your Order!</h2>
+        <p>We have received your order and are currently processing it. You will receive a confirmation email shortly with the details of your purchase.</p>
+        
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <ul id="order-details">
+                <!-- Order details will be dynamically populated using script.js -->
+            </ul>
+            <p><strong>Total:</strong> <span id="order-total">₱0.00</span></p>
+        </div>
+
+        <a href="index.html" class="home-btn">Back to Home</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 ShoeSpot. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const orderDetails = document.getElementById("order-details");
+            const orderTotal = document.getElementById("order-total");
+    
+            // Fetch cart and totalPrice from localStorage
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const totalPrice = JSON.parse(localStorage.getItem("totalPrice")) || 0;
+            const checkoutStatus = localStorage.getItem("checkoutStatus");
+    
+            if (checkoutStatus !== "completed") {
+                // Redirect to home if no valid checkout
+                orderDetails.innerHTML = "<li>No recent order found. Please checkout first.</li>";
+                orderTotal.textContent = "₱0.00";
+                localStorage.removeItem("cart");
+                localStorage.removeItem("totalPrice");
+                localStorage.removeItem("checkoutStatus");
+                return;
+            }
+    
+            if (cart.length > 0) {
+                cart.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = `${item.quantity} x ${item.productName} (Size: ${item.size}) - ${new Intl.NumberFormat("en-PH", {
+                        style: "currency",
+                        currency: "PHP",
+                    }).format(item.price * item.quantity)}`;
+                    orderDetails.appendChild(li);
+                });
+    
+                orderTotal.textContent = new Intl.NumberFormat("en-PH", {
+                    style: "currency",
+                    currency: "PHP",
+                }).format(totalPrice);
+    
+                // Clear cart and total price from localStorage
+                localStorage.removeItem("cart");
+                localStorage.removeItem("totalPrice");
+                localStorage.setItem("checkoutStatus", "incomplete");
+            } else {
+                orderDetails.innerHTML = "<li>Your cart was empty. Please shop again!</li>";
+                orderTotal.textContent = "₱0.00";
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>
