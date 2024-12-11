@@ -6,7 +6,22 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .cash-on-delivery-btn {
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
+        .cash-on-delivery-btn:hover {
+            background-color: #000000;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -68,28 +83,51 @@
                 <label>Postal/Zip</label>
                 <input type="text" placeholder="Enter postal/zip code" required>
 
-                <button type="submit" class="continue-btn">Continue</button>
-            </form>
-        </section>
-
-        <!-- Shipping Options Section -->
-        <section class="shipping-options">
-            <h2>Shipping Options</h2>
-            <p>Shipping options will be calculated here once we have your address.</p>
+                <button type="submit" class="continue-btn" id="continue-btn" disabled>Continue</button>
+    </form>
         </section>
 
         <!-- Payment Section -->
         <section class="payment">
             <h2>Payment</h2>
-            <p>All transactions are secure, and your credit card information is never stored.</p>
-            <button class="paypal-btn">PayPal Checkout</button>
+            <p>All transactions are secure.</p>
+            <button class="cash-on-delivery-btn" id="payment-btn" onclick="enableContinue()">Cash on Delivery</button>
         </section>
+
+
+<script>
+    // Function to enable the "Continue" button after payment method selection
+    function enableContinue() {
+        const continueBtn = document.getElementById('continue-btn');
+        continueBtn.disabled = false;
+        alert('You selected Cash on Delivery as your payment method. Thank you for shopping with us!');
+    }
+
+    // Ensure form submission is blocked if payment is not selected
+    const form = document.querySelector('.customer-info form');
+    form.addEventListener('submit', function (event) {
+        const continueBtn = document.getElementById('continue-btn');
+        if (continueBtn.disabled) {
+            event.preventDefault();
+            alert('Please select a payment method before continuing.');
+        }
+    });
+</script>
     </main>
 
     <footer>
         <p>&copy; 2024 Shopping Cart. All rights reserved.</p>
     </footer>
+    <script>function notifyPayment(method) {
+        alert(`You selected ${method} as your payment method. Thank you for shopping with us!`);
+    }
+
+    // Example clear cart function (placeholder)
+    function clearCart() {
+        alert('Cart has been cleared.');
+    }</script>
 
     <script src="script.js"></script>
+    
 </body>
 </html>

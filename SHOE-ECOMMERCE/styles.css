@@ -1,6 +1,6 @@
 /* Header Styling */
 header {
-    background-color: #333;
+    background-color: #000000;
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -26,7 +26,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: #555;
+    background-color: #000000;
 }
 
 /* Section and Category Styling */
@@ -36,7 +36,7 @@ section {
 
 section h2 {
     font-size: 1.5em;
-    color: #333;
+    color: #000000;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -51,11 +51,11 @@ section h2 {
 
 /* Product Styling */
 .product {
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
     padding: 10px;
     text-align: center;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #ffffff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -81,7 +81,7 @@ section h2 {
 
 /* Button Styling */
 button {
-    background-color: #333;
+    background-color: #3f3e3e;
     color: white;
     border: none;
     padding: 10px 15px;

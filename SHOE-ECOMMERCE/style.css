@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #007BFF;
+    background-color: #000000;
     color: white;
     padding: 15px 0;
     display: flex;
@@ -87,7 +87,7 @@ main {
 }
 
 h2 {
-    border-bottom: 2px solid #007BFF;
+    border-bottom: 2px solid #000000;
     padding-bottom: 5px;
     margin-bottom: 15px;
     font-size: 1.5em;
@@ -163,7 +163,7 @@ h2 {
 
 .order-total span {
     font-weight: bold;
-    color: #007BFF;
+    color: #ff0000;
     font-size: 1.2em;
 }
 
@@ -188,14 +188,14 @@ form select {
 
 form input:focus,
 form select:focus {
-    outline: 2px solid #007BFF;
-    border-color: #007BFF;
+    outline: 2px solid #000000;
+    border-color: #575656;
 }
 
 .continue-btn {
     margin-top: 20px;
-    background: #007BFF;
-    color: white;
+    background: #000000;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px;
     border-radius: 4px;
@@ -205,7 +205,7 @@ form select:focus {
 }
 
 .continue-btn:hover {
-    background: #0056b3;
+    background: #ff0101;
 }
 
 /* Shipping Options */
